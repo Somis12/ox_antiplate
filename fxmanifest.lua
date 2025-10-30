@@ -1,0 +1,6 @@
+fx_version 'cerulean'
+game 'gta5'
+lua54 'yes'
+author 'Somis https://discord.gg/EG8EES8qSw'
+description 'protects you from cheaters open other players glovebox.'
+server_script 'server.lua'
