@@ -1,11 +1,11 @@
-
 local veh_plates = {}
 
 AddEventHandler('entityCreated', function(entity)
-  if not DoesEntityExist(entity) or GetEntityType(entity) ~= 2 then
+  if GetEntityType(entity) ~= 2 then
         return
     end
     SetTimeout(2000, function()
+        if not DoesEntityExist(entity) then return end
     local plate = GetVehicleNumberPlateText(entity)
     if plate then
         local netId = NetworkGetNetworkIdFromEntity(entity)
@@ -15,10 +15,11 @@ AddEventHandler('entityCreated', function(entity)
 end)
 
 AddEventHandler('serverEntityCreated', function(entity)
-    if not DoesEntityExist(entity) or GetEntityType(entity) ~= 2 then
+    if GetEntityType(entity) ~= 2 then
         return
     end
     SetTimeout(2000, function()
+        if not DoesEntityExist(entity) then return end
     local plate = GetVehicleNumberPlateText(entity)
     if plate then
         local netId = NetworkGetNetworkIdFromEntity(entity)
