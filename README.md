@@ -1,2 +1,2 @@
 # ox_antiplate
-protects you from cheaters open other players glovebox.
+protects you from cheaters open other players glovebox and trunk
